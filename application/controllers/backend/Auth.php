@@ -3,7 +3,8 @@
 class Auth extends CI_Controller {
 
 	public function login(){
-	   $this->load->view('backend/layout/login');
+	   $data['template'] = 'backend/auth/login';
+	   $this->load->view('backend/layout/login',isset($data)?$data:NULL);
 	}
 	   
 }
